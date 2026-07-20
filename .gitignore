@@ -1,0 +1,13 @@
+# Raw PDFs — large binaries; track metadata in wiki/ instead
+raw/*.pdf
+
+# OS artifacts
+.DS_Store
+**/.DS_Store
+
+# Editor artifacts
+.vscode/
+*.swp
+*.swo
+to-do.md
+to-do.md
