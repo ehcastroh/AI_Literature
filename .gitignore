@@ -9,5 +9,15 @@ raw/*.pdf
 .vscode/
 *.swp
 *.swo
-to-do.md
+
+# Node
+.node_modules/
+node_modules/
+
+# Nix
+result
+result-*
+.direnv/
+
+# Personal scratch
 to-do.md

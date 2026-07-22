@@ -14,9 +14,16 @@
     devShells.${system}.default = pkgs.mkShell {
       packages = with pkgs; [
         # tools specific to this wiki project — adjust freely
-        pandoc          # document conversion
-        # python3       # if you process papers with scripts
+        pandoc 	# document conversion
+	ripgre	# fast search
+	fd	# fast find
+	fzf	# fuzzy finder
+	jq	# json on command line
+	lazygit
+	nerd-fonts.hack			
       ];
+      fonts.fontconfig.enable = true;
+      home.sessionVariables.EDITOR = "nvim";
 
       shellHook = ''
         echo "AI_Literature dev shell ready"
