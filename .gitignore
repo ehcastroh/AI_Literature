@@ -21,3 +21,8 @@ result-*
 
 # Personal scratch
 to-do.md
+
+# AI
+.claude/settings.local.json
+.claude/*.local.*
+.claude/**/credentials
