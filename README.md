@@ -1,6 +1,6 @@
 # LLM Wiki
 
-An agent-maintained research knowledge base for AI/ML papers — built on [Karpathy's LLM Wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f), extended with the learning-science machinery the original pattern leaves out.
+An agent-maintained research knowledge base for AI/ML papers — built on Karpathy's LLM Wiki pattern, extended with the learning-science machinery the original pattern leaves out.
 
 Drop a PDF in `raw/`. An agent reads it, files it, cross-references it, flags what it contradicts, and logs what it did. The wiki compounds. You never write it.
 
@@ -31,7 +31,7 @@ The second differentiator: every design decision here traces to a citation, and 
 
 ---
 
-## Core idea in one diagram
+## Core idea diagram
 
 ```
 raw/          immutable sources. No agent writes here — enforced by tool
