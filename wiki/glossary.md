@@ -17,7 +17,13 @@ Entries are alphabetical. Link to the paper where a term is first introduced.
 
 **Dense retrieval** — Retrieval method that maps queries and documents to dense embedding vectors and measures relevance by inner-product (vector) similarity, as opposed to sparse/lexical methods like BM25. Requires learning two encoder functions into a shared embedding space.
 
+## E
+
+**Episodic memory buffer** — In Reflexion ([[shinn-2023-reflexion]]), the long-term memory component storing verbal self-reflections from past trials. Bounded to Ω=1-3 entries due to LLM context length constraints. Distinct from short-term memory (current trajectory). The constraint is a context budget, not a quality design choice.
+
 ## H
+
+**HumanEval** — Code generation benchmark (Chen et al. 2021) consisting of 164 Python programming problems with hand-written unit tests. Primary evaluation for pass@1 accuracy in code generation. Used in [[shinn-2023-reflexion]].
 
 **Hypothetical Document Embeddings (HyDE)** — Zero-shot dense retrieval method (Gao et al. 2022, [[gao-2022-hyde]]). Given a query, an instruction-following LLM generates a hypothetical document (may be factually wrong) which is encoded into a dense vector by a contrastive encoder; real documents are retrieved by similarity to that vector. No model training required.
 
@@ -26,6 +32,10 @@ Entries are alphabetical. Link to the paper where a term is first introduced.
 **MIPS (Maximum Inner Product Search)** — Efficient algorithm for finding the document embedding with highest inner product similarity to a query vector in a large corpus. The search primitive underlying all dense retrieval systems.
 
 **Mr.Tydi** — Multi-lingual dense retrieval benchmark (Zhang et al. 2021) covering Swahili, Korean, Japanese, Bengali, and other languages. Used to evaluate multilingual retrieval in [[gao-2022-hyde]].
+
+## V
+
+**Verbal reinforcement learning** — Reinforcement of language agents through natural language feedback rather than weight updates or scalar rewards. Coined in [[shinn-2023-reflexion]]. The policy is parameterized as {LLM weights, episodic memory}; only memory is updated between trials. Contrast with RLHF (weight updates) and prompting (no trial-and-error loop).
 
 ## Z
 
