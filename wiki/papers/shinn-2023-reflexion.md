@@ -84,7 +84,7 @@ Task-specific implementations:
 
 ## Relations
 
-- Supports: - (no contradicting papers yet in corpus; see [[glossary]] for verbal reinforcement learning)
+- Supports: [[park-2023-generative-agents]] (both show reflection over past experience improves agent behavior; Reflexion = bounded retry loop, Generative Agents = long-horizon memory stream)
 - Contradicts: - (potential conflict with self-correction critique papers not yet in corpus)
 - Superseded by: -
 

@@ -9,19 +9,31 @@
   "colorGroups": [
     {
       "query": "path:papers/",
-      "color": { "a": 1, "rgb": 4193280 }
+      "color": {
+        "a": 1,
+        "rgb": 4193280
+      }
     },
     {
       "query": "file:glossary OR file:index OR file:overview",
-      "color": { "a": 1, "rgb": 15098931 }
+      "color": {
+        "a": 1,
+        "rgb": 15098931
+      }
     },
     {
       "query": "path:open/",
-      "color": { "a": 1, "rgb": 16744192 }
+      "color": {
+        "a": 1,
+        "rgb": 16744192
+      }
     },
     {
       "query": "path:topics/",
-      "color": { "a": 1, "rgb": 5636095 }
+      "color": {
+        "a": 1,
+        "rgb": 5636095
+      }
     }
   ],
   "collapse-display": false,
@@ -29,10 +41,11 @@
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1.5,
   "lineSizeMultiplier": 1,
+  "collapse-forces": true,
   "centerStrength": 0.5,
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 1,
-  "close": false
+  "scale": 0.6666666666666666,
+  "close": true
 }
