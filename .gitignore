@@ -26,3 +26,9 @@ to-do.md
 .claude/settings.local.json
 .claude/*.local.*
 .claude/**/credentials
+
+# Obsidian — track app.json and graph.json, ignore user-specific state
+wiki/.obsidian/workspace.json
+wiki/.obsidian/workspace-mobile.json
+wiki/.obsidian/cache
+wiki/.obsidian/.trash/

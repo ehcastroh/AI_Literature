@@ -95,7 +95,20 @@ Where the paper does not say, write `[not stated in source]`. That gap is inform
 
 ---
 
-## 5. Provenance and durability
+## 5. Links — use wikilinks throughout
+
+All cross-references between wiki files use Obsidian wikilink syntax: `[[slug]]` or `[[slug|display text]]`. Do not use markdown links `[text](path.md)` for internal wiki cross-references. Wikilinks power the graph view and survive file moves.
+
+- Paper to paper: `[[shinn-2023-reflexion]]`
+- Paper to glossary: `[[glossary]]` (link to the file; Obsidian will resolve)
+- Paper to open question: `[[open/does-self-reflection-work]]`
+- Index and glossary entries pointing to papers: `[[gao-2022-hyde]]`
+
+Markdown links are fine for external URLs and for references to files outside `wiki/`.
+
+---
+
+## 6. Provenance and durability
 
 **Triage.** Spend depth on what is causally opaque or expensive to rediscover. Spend nothing on what a reader could infer from the abstract in five minutes. You cannot maximize what is known by writing everything down — every added token degrades what surrounds it. **State what you chose to omit and why.**
 
@@ -107,7 +120,7 @@ Where the paper does not say, write `[not stated in source]`. That gap is inform
 
 ---
 
-## 6. Evaluation apparatus
+## 7. Evaluation apparatus
 
 `topics/` pages ship with a way for the reader to check themselves.
 
@@ -118,7 +131,7 @@ Where the paper does not say, write `[not stated in source]`. That gap is inform
 
 ---
 
-## 7. Templates
+## 8. Templates
 
 ### `wiki/papers/<first-author>-<year>-<slug>.md`
 
@@ -151,9 +164,9 @@ Where the paper does not say, write `[not stated in source]`. That gap is inform
  the reader cannot ask the authors, so record what they would ask.>
 
 ## Relations
-- Supports: <wiki links>
-- Contradicts: <wiki links> → see wiki/open/<file>
-- Superseded by: <wiki links>
+- Supports: [[other-paper-slug]]
+- Contradicts: [[other-paper-slug]] → see [[open/question-file]]
+- Superseded by: [[newer-paper-slug]]
 
 ## Expiry
 <What observation would retire this. Re-verify by: <trigger>>
@@ -217,7 +230,7 @@ Opened <date> · Last reviewed <date> · <OPEN | NARROWING | RESOLVED → link>
 
 ---
 
-## 8. Anti-patterns
+## 9. Anti-patterns
 
 | Doing this | Why it fails |
 |---|---|

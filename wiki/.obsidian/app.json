@@ -1,0 +1,10 @@
+{
+  "useMarkdownLinks": false,
+  "newLinkFormat": "shortest",
+  "attachmentFolderPath": "assets",
+  "alwaysUpdateLinks": true,
+  "showLineNumber": false,
+  "foldHeading": false,
+  "readableLineLength": true,
+  "showFrontmatter": false
+}

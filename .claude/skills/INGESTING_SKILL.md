@@ -46,7 +46,7 @@ Extract in this order. The order matters: reading results before method invites 
 
 ## Phase 3 — Write the note
 
-Use the `papers/` template in `wiki/CONVENTIONS.md` §7.
+Use the `papers/` template in `wiki/CONVENTIONS.md` §8.
 
 `papers/` is **reference mode**. Zero friction. No retrieval prompts, no exercises, no attempt-before-reveal — half your readers are agents doing lookup and friction breaks them. Front-load the claim. Keep headings identical across all paper notes; predictability beats elegance.
 

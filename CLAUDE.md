@@ -46,9 +46,9 @@ Load only what the task needs.
 
 | If you are… | Load |
 |---|---|
-| Ingesting a PDF from `raw/` | `.claude/skills/ingest-paper/SKILL.md` |
+| Ingesting a PDF from `raw/` | `.claude/skills/INGESTING_SKILL.md` |
 | Writing or editing any wiki prose | `wiki/CONVENTIONS.md` |
-| Looking for gaps, contradictions, or questions | `.claude/skills/wiki-discovery/SKILL.md` |
+| Looking for gaps, contradictions, or questions | `.claude/skills/DISCOVERY_SKILL.md` |
 | Unsure how to learn or hand off in a new domain | `BEHAVIORAL_AND_CULTURE.md` |
 | Answering a question from the wiki | Nothing. Read `wiki/index.md`, follow the row. |
 
