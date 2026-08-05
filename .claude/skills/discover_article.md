@@ -15,14 +15,14 @@ Output goes to `wiki/open/`. Not to `papers/` — those mirror single sources. N
 
 ## The honesty constraint
 
-You cannot verify that a finding is new. You can only verify that it is absent from *this corpus*, which is 17 papers.
+You cannot verify that a finding is new. You can only verify that it is absent from *this corpus*, which is 19 papers.
 
 Most apparent discoveries are things you do not know the name for. Before writing anything to `wiki/open/`, **search for the canonical name.** If the field already calls this something, you have found a gap in the wiki, not a gap in the literature — still useful, but a different claim, and it belongs in the glossary rather than in `open/`.
 
 Every `open/` page states which it is:
 
 - `GAP-IN-WIKI` — the corpus lacks it; the field probably has it. Go find it.
-- `GAP-IN-CORPUS` — nothing among these 17 papers addresses it. Says nothing about the field.
+- `GAP-IN-CORPUS` — nothing among these 19 papers addresses it. Says nothing about the field.
 - `GAP-IN-FIELD` — searched, found nothing. **The highest bar and the rarest. Requires an actual external search, and say what you searched.**
 
 Overclaiming here poisons the wiki, because a false `GAP-IN-FIELD` looks exactly like a research direction.

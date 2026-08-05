@@ -25,7 +25,7 @@ Writing a learning exercise into `papers/` breaks agent retrieval. Writing a ter
 ## Repo map
 
 ```
-raw/                    17 PDFs, 2022–2026. READ-ONLY. Never edit, move, or delete.
+raw/                    19 PDFs, 2022–2026. READ-ONLY. Never edit, move, or delete.
 wiki/
   index.md              Routing table. Every artifact gets exactly one row.
   overview.md           The map of the field at low resolution. Global before local.
@@ -46,9 +46,9 @@ Load only what the task needs.
 
 | If you are… | Load |
 |---|---|
-| Ingesting a PDF from `raw/` | `.claude/skills/INGESTING_SKILL.md` |
+| Ingesting a PDF from `raw/` | `.claude/skills/ingest_article.md` |
 | Writing or editing any wiki prose | `wiki/CONVENTIONS.md` |
-| Looking for gaps, contradictions, or questions | `.claude/skills/DISCOVERY_SKILL.md` |
+| Looking for gaps, contradictions, or questions | `.claude/skills/discover_article.md` |
 | Unsure how to learn or hand off in a new domain | `BEHAVIORAL_AND_CULTURE.md` |
 | Answering a question from the wiki | Nothing. Read `wiki/index.md`, follow the row. |
 
@@ -88,7 +88,7 @@ Load only what the task needs.
 - Inventory after: 4/17 ingested
 ```
 
-**Inventory drift is a known failure here.** The log currently claims 3 PDFs; `raw/` holds 17. Recount `raw/` on every append and write the true ratio. A ledger that silently disagrees with the filesystem is worse than no ledger.
+**Inventory drift is a known failure here.** Recount `raw/` on every append and write the true ratio. A ledger that silently disagrees with the filesystem is worse than no ledger.
 
 ---
 

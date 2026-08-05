@@ -63,7 +63,7 @@ scripts/
 .claude/skills/  .claude/agents/  .claude/commands/
 ```
 
-Move the existing 17 PDFs into `raw/papers/`.
+Move the existing 19 PDFs into `raw/papers/`.
 
 ### 1b. Scripts
 
@@ -83,7 +83,7 @@ Reads `review/queue.md`, returns items due today on a spaced schedule of **1, 3,
 
 Write each script's usage into `scripts/README.md`.
 
-**Checkpoint:** all four scripts run clean on the current (nearly empty) wiki and return sensible output. `inventory.sh` correctly reports 0/17 ingested.
+**Checkpoint:** all four scripts run clean on the current (nearly empty) wiki and return sensible output. `inventory.sh` correctly reports 0/19 ingested.
 
 ---
 
@@ -144,7 +144,7 @@ Cross-corpus pattern hunting.
 
 Create in `.claude/skills/<name>/SKILL.md`, each with YAML frontmatter (`name`, `description` — the description is how the skill gets discovered, so state both what it does *and when to use it*).
 
-Two skills are provided separately and should be installed as-is: **`ingest-paper`** and **`wiki-discovery`**. Write the remaining three.
+Two skills are provided separately and should be installed as-is: **`ingest_article`** and **`discover_article`**. Write the remaining three.
 
 ### `wiki-lint`
 Runs the decay loop. Order matters — mechanical fixes first, so content review isn't polluted by noise:
@@ -195,7 +195,7 @@ Thin wrappers in `.claude/commands/`. Each delegates to a skill and does no work
 
 ## Phase 6 — End-to-end proof on one paper
 
-**Goal:** demonstrate the whole loop before touching the other sixteen.
+**Goal:** demonstrate the whole loop before touching the other eighteen.
 
 1. Pick the single most foundational paper in `raw/papers/`. State why.
 2. `/ingest` it. Follow `ingest-paper` exactly — including reading method and limitations rather than the abstract.
@@ -224,7 +224,7 @@ Thin wrappers in `.claude/commands/`. Each delegates to a skill and does no work
 
 ## After the bootstrap
 
-Ingest the remaining sixteen papers **one per session**. After roughly five, `wiki/overview.md` becomes writable — you will have enough of the field to map it. After roughly eight, `/discover` becomes worth running; below that you are pattern-matching on noise.
+Ingest the remaining eighteen papers **one per session**. After roughly five, `wiki/overview.md` becomes writable — you will have enough of the field to map it. After roughly eight, `/discover` becomes worth running; below that you are pattern-matching on noise.
 
 Run `/lint` weekly regardless of activity. Knowledge decays while sitting still, which is why it goes on a timer rather than on change.
 

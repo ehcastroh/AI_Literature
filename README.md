@@ -4,7 +4,7 @@ An agent-maintained research knowledge base for AI/ML papers — built on Karpat
 
 Drop a PDF in `raw/`. An agent reads it, files it, cross-references it, flags what it contradicts, and logs what it did. The wiki compounds. You never write it.
 
-**Status:** working. 17 sources, ingesting. Expect rough edges.
+**Status:** working. 19 sources, fully ingested.
 
 ---
 

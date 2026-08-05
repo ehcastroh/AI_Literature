@@ -58,7 +58,7 @@ llm-wiki/
 ├── ARCHITECTURE.md              # this file
 │
 ├── raw/                         # LAYER 1 — immutable
-│   ├── papers/                  #   the 17 PDFs
+│   ├── papers/                  #   the 19 PDFs
 │   ├── transcripts/             #   VTT (planned)
 │   └── assets/                  #   extracted figures
 │
@@ -143,6 +143,6 @@ Four stacked defenses, none sufficient alone:
 
 ## Scale expectations
 
-The `index.md`-first retrieval strategy works well to roughly a few hundred pages. At 17 papers you are nowhere near the limit; do not build search infrastructure yet. When `index.md` no longer fits comfortably in context, add hybrid search (SQLite FTS5, or `qmd`) as a **script the agent shells out to**, not as a service.
+The `index.md`-first retrieval strategy works well to roughly a few hundred pages. At 19 papers you are nowhere near the limit; do not build search infrastructure yet. When `index.md` no longer fits comfortably in context, add hybrid search (SQLite FTS5, or `qmd`) as a **script the agent shells out to**, not as a service.
 
 Deterministic work belongs in scripts, not in LLM calls. Counting files, checking links, and computing what's due for review are classical computation. Spending tokens on them is both expensive and *less reliable* than a five-line shell script.
