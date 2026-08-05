@@ -92,6 +92,16 @@ Writing the file is not ingesting. An unlinked note is not in the wiki.
 
 Append to `wiki/log.md`. Never edit a prior entry; supersede it with a new one.
 
+**Recount before you write the inventory line.** The ledger has drifted before because agents copied the previous entry's numbers instead of counting. Run this first and paste the output into the `Inventory after:` line — do not type the numbers by hand:
+
+```bash
+printf 'Inventory after: %s/%s ingested\n' \
+  "$(find wiki/wiki -maxdepth 1 -name '*.md' ! -name '.gitkeep' | wc -l | tr -d ' ')" \
+  "$(find raw/papers -maxdepth 1 -name '*.pdf' | wc -l | tr -d ' ')"
+```
+
+Then append the block:
+
 ```markdown
 ## <ISO date> — ingest: <slug>
 - Source: raw/<file>.pdf
@@ -102,8 +112,10 @@ Append to `wiki/log.md`. Never edit a prior entry; supersede it with a new one.
 - Glossary: +<terms>
 - Contradictions: <none | conflicts with X → opened wiki/open/Y.md>
 - Confidence: VERIFIED | PARTIAL | UNVERIFIED
-- Inventory after: <n>/<total> ingested   ← recount raw/, do not copy the last figure
+- Inventory after: <n>/<total> ingested   ← paste from the recount command above
 ```
+
+After appending, run `scripts/lint.sh`. It re-derives the same counts from the filesystem and fails if the log or the coverage drifted. A green lint is the definition of done for Phase 5, not the presence of the log block.
 
 ---
 
