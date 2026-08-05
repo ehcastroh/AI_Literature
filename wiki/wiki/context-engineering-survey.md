@@ -113,7 +113,7 @@ The survey identifies this asymmetry as the "most critical challenge" in the fie
 
 - The key conceptual shift: treating context as a system of composable, optimizable functions (C = A(c1,...,cn)) rather than a string to be hand-crafted enables modular debugging, principled optimization, and component-level evaluation. This reframing alone changes how to approach system design.
 - The information-theoretic retrieval criterion (maximize I(Y*; cknow | cquery)) distinguishes good retrieval from mere semantic similarity — a retrieval system that returns semantically similar but information-redundant context is suboptimal under this criterion.
-- Multi-objective optimization (multiple scores) finding from AlphaEvolve connects here: [[novikov-2025-alphaevolve]] independently found that diverse optimization criteria create structurally diverse programs; the same principle applies to diverse context components.
+- Multi-objective optimization (multiple scores) finding from AlphaEvolve connects here: [[alphaevolve-coding-agent]] independently found that diverse optimization criteria create structurally diverse programs; the same principle applies to diverse context components.
 
 ## Not Stated in Source
 
@@ -122,11 +122,12 @@ The survey identifies this asymmetry as the "most critical challenge" in the fie
 - Agent communication protocol names (MCP, A2A, ACP, ANP) are mentioned but not compared on a common capability axis.
 
 ## Relations
+- Cluster: [[retrieval-and-context]]
 
-- Supersedes (in scope): [[ramnath-2025-apo-survey]] (prompt optimization is subsumed as one component: Context Retrieval/Generation §4.1; Context Engineering is the broader discipline)
-- Contextualizes: [[jiang-2023-longllmlingua]] (prompt compression = Context Management §4.3.3)
-- Contextualizes: [[gao-2022-hyde]] (RAG = System Implementation §5.1)
-- Contextualizes: [[park-2023-generative-agents]] and [[shinn-2023-reflexion]] (memory systems = §5.2; self-refinement = §4.2.2)
-- Contextualizes: [[narayan-2025-minions]] (local-remote multi-agent = Multi-Agent Systems §5.4)
+- Supersedes (in scope): [[automatic-prompt-optimization-survey]] (prompt optimization is subsumed as one component: Context Retrieval/Generation §4.1; Context Engineering is the broader discipline)
+- Contextualizes: [[longllmlingua-prompt-compression]] (prompt compression = Context Management §4.3.3)
+- Contextualizes: [[zero-shot-dense-retrieval]] (RAG = System Implementation §5.1)
+- Contextualizes: [[generative-agents-human-simulacra]] and [[reflexion-verbal-reinforcement-learning]] (memory systems = §5.2; self-refinement = §4.2.2)
+- Contextualizes: [[minions-device-cloud-collaboration]] (local-remote multi-agent = Multi-Agent Systems §5.4)
 - Contradicts: -
 - Superseded by: -

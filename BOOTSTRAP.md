@@ -21,7 +21,7 @@ Three governing documents already exist or will be created in Phase 2. Read them
 - `ARCHITECTURE.md` — the layout and why it is what it is
 - `CLAUDE.md` — always-resident router and non-negotiables
 - `BEHAVIORAL_AND_CULTURE.md` — how agents learn and hand off
-- `wiki/CONVENTIONS.md` — how to write wiki pages
+- `wiki/CLAUDE.md` — how to write wiki pages
 
 **Rules for this bootstrap itself:**
 
@@ -38,7 +38,7 @@ Three governing documents already exist or will be created in Phase 2. Read them
 **Goal:** a working dev shell and an honest count.
 
 1. **Fix `flake.nix`.** It currently fails to evaluate — `ripgrep` is missing a character and indentation mixes tabs and spaces. Repair it and confirm `nix develop` succeeds. Required packages: `pandoc`, `ripgrep`, `fd`, `fzf`, `jq`, `lazygit`, `python3`, `poppler_utils` (for `pdftotext`).
-2. **Take inventory.** Count `raw/**/*.pdf`. Count `wiki/papers/*.md`. Report both.
+2. **Take inventory.** Count `raw/**/*.pdf`. Count `wiki/wiki/*.md`. Report both.
 3. **Correct the log.** `wiki/log.md` claims 3 PDFs; reality is 17. Do not edit the historical entry — the log is append-only. Append a correction entry that supersedes it.
 4. **Report, do not fix, anything else broken.** List it and stop.
 
@@ -57,7 +57,7 @@ Create, each with a `.gitkeep`:
 ```
 raw/papers/  raw/transcripts/  raw/assets/
 staging/
-wiki/papers/  wiki/concepts/  wiki/topics/  wiki/open/  wiki/decisions/
+wiki/wiki/  wiki/concepts/  wiki/topics/  wiki/open/  wiki/decisions/
 review/
 scripts/
 .claude/skills/  .claude/agents/  .claude/commands/
@@ -70,7 +70,7 @@ Move the existing 19 PDFs into `raw/papers/`.
 Write these four. Keep them dependency-free (POSIX shell and Python stdlib only). Each must exit non-zero on failure so agents can use exit codes as a signal.
 
 **`scripts/inventory.sh`**
-Counts sources in `raw/papers/` and notes in `wiki/papers/`. Lists un-ingested sources by name. Prints `INGESTED: n/m`. Exits 1 if `wiki/log.md`'s most recent inventory line disagrees with the true count — this is the drift detector, and drift is the primary failure mode of this pattern.
+Counts sources in `raw/papers/` and notes in `wiki/wiki/`. Lists un-ingested sources by name. Prints `INGESTED: n/m`. Exits 1 if `wiki/log.md`'s most recent inventory line disagrees with the true count — this is the drift detector, and drift is the primary failure mode of this pattern.
 
 **`scripts/links.sh`**
 Extracts every `[[wikilink]]` across `wiki/`. Reports: dead links (target file absent), orphans (page with zero inbound links, excluding `index.md`, `overview.md`, `log.md`, `glossary.md`), and empty pages (frontmatter only). Exits 1 if any dead links found.
@@ -91,7 +91,7 @@ Write each script's usage into `scripts/README.md`.
 
 **Goal:** the governing documents in place.
 
-Install `CLAUDE.md`, `BEHAVIORAL_AND_CULTURE.md`, `ARCHITECTURE.md`, and `wiki/CONVENTIONS.md` (provided separately — do not rewrite them from scratch; adapt paths if the layout shifted in Phase 1).
+Install `CLAUDE.md`, `BEHAVIORAL_AND_CULTURE.md`, `ARCHITECTURE.md`, and `wiki/CLAUDE.md` (provided separately — do not rewrite them from scratch; adapt paths if the layout shifted in Phase 1).
 
 Then create the four wiki spine files, empty but structurally valid:
 
@@ -144,7 +144,7 @@ Cross-corpus pattern hunting.
 
 Create in `.claude/skills/<name>/SKILL.md`, each with YAML frontmatter (`name`, `description` — the description is how the skill gets discovered, so state both what it does *and when to use it*).
 
-Two skills are provided separately and should be installed as-is: **`ingest_article`** and **`discover_article`**. Write the remaining three.
+Two skills are provided separately and should be installed as-is: **`ingest`** and **`discover`**. Write the remaining three.
 
 ### `wiki-lint`
 Runs the decay loop. Order matters — mechanical fixes first, so content review isn't polluted by noise:
@@ -213,8 +213,8 @@ Thin wrappers in `.claude/commands/`. Each delegates to a skill and does no work
 
 **Goal:** make the harness self-improving.
 
-1. Review Phase 6's findings. **Any defect that appeared twice becomes a rule** in `wiki/CONVENTIONS.md` or the relevant SKILL.md. Otherwise you re-teach it every session forever.
-2. Add a `## Merge log` section to `CONVENTIONS.md` recording what changed and why, with confidence markers.
+1. Review Phase 6's findings. **Any defect that appeared twice becomes a rule** in `wiki/CLAUDE.md` or the relevant SKILL.md. Otherwise you re-teach it every session forever.
+2. Add a `## Merge log` section to `CLAUDE.md` recording what changed and why, with confidence markers.
 3. Optionally add a git hook: run `scripts/links.sh` and `scripts/inventory.sh` pre-commit; block on dead links, warn on drift.
 4. Write `to-do.md` fresh, carrying forward the VTT transcript support item.
 

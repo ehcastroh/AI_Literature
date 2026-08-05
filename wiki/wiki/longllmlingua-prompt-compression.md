@@ -86,9 +86,10 @@ Small model used throughout: LLaMA-2-7B-Chat. Target LLMs tested: GPT-3.5-Turbo-
 - Latency measured on V100-32G; not characterized on CPU or edge hardware where LLaMA-2-7B is expensive.
 
 ## Relations
+- Cluster: [[retrieval-and-context]]
 
-- Supports: [[gao-2022-hyde]] (HyDE and LongLLMLingua address orthogonal parts of retrieval pipelines - HyDE improves what documents are retrieved; LongLLMLingua improves how those documents are presented to the LLM after retrieval)
-- Supports: [[park-2023-generative-agents]] (Generative Agents operate in long multi-agent contexts; prompt compression could reduce the cost of feeding the memory stream and retrieved observations into the LLM at each step)
+- Supports: [[zero-shot-dense-retrieval]] (HyDE and LongLLMLingua address orthogonal parts of retrieval pipelines - HyDE improves what documents are retrieved; LongLLMLingua improves how those documents are presented to the LLM after retrieval)
+- Supports: [[generative-agents-human-simulacra]] (Generative Agents operate in long multi-agent contexts; prompt compression could reduce the cost of feeding the memory stream and retrieved observations into the LLM at each step)
 - Contradicts: -
 - Superseded by: -
 

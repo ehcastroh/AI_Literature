@@ -1,6 +1,6 @@
 ---
-name: ingest-paper
-description: Ingest a single research PDF from raw/ into the wiki. Use when asked to ingest, process, add, or read a paper from raw/, or when raw/ contains files with no corresponding wiki/papers/ entry. Covers extraction, verification against the source, index and glossary integration, contradiction detection, and logging.
+name: ingest
+description: Ingest a single source from raw/ into the wiki. Use when asked to ingest, process, add, or read any source (PDF, transcript, audio summary) from raw/, or when raw/ contains files with no corresponding wiki/wiki/ entry. Covers extraction, verification against the source, index and glossary integration, contradiction detection, and logging.
 ---
 
 # Ingesting a paper
@@ -13,7 +13,7 @@ This is not a style preference. Per-step error rate rises as a run continues, pa
 
 ## Phase 0 — Orient and claim
 
-- [ ] `ls raw/` and `ls wiki/papers/`. Identify what is not yet ingested.
+- [ ] `ls raw/papers/` and `ls wiki/wiki/`. Identify what is not yet ingested.
 - [ ] Recount both. `wiki/log.md` has drifted before — it claimed 3 PDFs when `raw/` held 17. Trust the filesystem, not the ledger.
 - [ ] Pick **one** paper. State which and why.
 - [ ] Before opening it: write down what you already believe about this paper or its topic, marked `UNVERIFIED`. This is your prior. Phase 2 exists to kill the wrong parts.
@@ -46,11 +46,18 @@ Extract in this order. The order matters: reading results before method invites 
 
 ## Phase 3 — Write the note
 
-Use the `papers/` template in `wiki/CONVENTIONS.md` §8.
+Use the `wiki/` template in `wiki/CLAUDE.md`.
 
-`papers/` is **reference mode**. Zero friction. No retrieval prompts, no exercises, no attempt-before-reveal — half your readers are agents doing lookup and friction breaks them. Front-load the claim. Keep headings identical across all paper notes; predictability beats elegance.
+`wiki/` is **reference mode**. Zero friction. No retrieval prompts, no exercises, no attempt-before-reveal — half your readers are agents doing lookup and friction breaks them. Front-load the claim. Keep headings identical across all paper notes; predictability beats elegance.
 
-Filename: `<first-author>-<year>-<slug>.md`, e.g. `shinn-2023-reflexion.md`.
+**Filename: 3-5 words from the paper title, hyphen-separated, lowercase.** Use the paper's own name, not the author or year. Aim for the most distinctive words — the ones a reader would search for.
+
+Examples:
+- "Reflexion: Language Agents with Verbal Reinforcement Learning" → `reflexion-verbal-reinforcement-learning.md`
+- "Minions: Cost-efficient Collaboration Between On-device and Cloud Language Models" → `minions-device-cloud-collaboration.md`
+- "Optimizing Prompts for Large Language Models: A Causal Approach" → `causal-prompt-optimization.md`
+
+Avoid author names, years, and internal codenames (HyDE, PE2, UniRoute) as the primary identifier unless the codename IS the paper's public name (Reflexion, AlphaEvolve, Minions).
 
 Two sections do the work that fluency would otherwise skip:
 
@@ -65,6 +72,17 @@ Writing the file is not ingesting. An unlinked note is not in the wiki.
 - [ ] **`wiki/index.md`** — add exactly one row. A note absent from the index has not been transmitted, however well written.
 - [ ] **`wiki/glossary.md`** — add new terms under their **canonical** names. If the paper coins a term for something the field already names, the established name is the entry and the paper's coinage is an alias.
 - [ ] **`wiki/overview.md`** — does the map of the field need adjusting? Usually no. Occasionally a paper relocates a whole subfield.
+- [ ] **Cluster assignment** — add `- Cluster: [[concept-slug]]` to the paper note's Relations section. The four existing concept pages are:
+
+  | Concept | `concepts/` slug | Papers belong here if they cover… |
+  |---|---|---|
+  | Retrieval and Context | `retrieval-and-context` | Dense retrieval, RAG, prompt compression, long-context, context engineering |
+  | Prompt Optimization | `prompt-optimization` | APE, meta-prompting, causal prompt selection, prompt search |
+  | Inference Efficiency | `inference-efficiency` | LLM routing, cascading, local-cloud split, edge deployment, token efficiency |
+  | Agents and Memory | `agents-and-memory` | Agent architectures, memory systems, self-improvement, multi-agent orchestration |
+
+  A paper may belong to more than one cluster — add all that apply. If the paper clearly belongs to none of the four, check whether it warrants a new concept page in `wiki/concepts/` and add a row to `wiki/index.md` for it.
+
 - [ ] **Contradiction check** — grep the existing corpus for claims this paper conflicts with.
   - Conflict found → **open `wiki/open/<question>.md`. Do not overwrite the older claim.** The disagreement is the most valuable thing in the corpus; silently resolving it destroys information.
   - Clear supersession (same question, better method, later date) → set `superseded_by` on the old note and `supersedes` on the new. Keep both. The *reason the field moved* is knowledge the newer paper does not contain.
@@ -79,7 +97,7 @@ Append to `wiki/log.md`. Never edit a prior entry; supersede it with a new one.
 - Source: raw/<file>.pdf
 - Read: <which sections, in full or partially>
 - Priors that died: <what you believed at Phase 0 that was wrong>
-- Wrote: wiki/papers/<slug>.md
+- Wrote: wiki/wiki/<slug>.md
 - Index: row added
 - Glossary: +<terms>
 - Contradictions: <none | conflicts with X → opened wiki/open/Y.md>

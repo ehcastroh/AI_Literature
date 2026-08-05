@@ -83,8 +83,9 @@ Task-specific implementations:
 - No analysis of reflection quality degradation across trials - do later reflections become less useful?
 
 ## Relations
+- Cluster: [[agents-and-memory]]
 
-- Supports: [[park-2023-generative-agents]] (both show reflection over past experience improves agent behavior; Reflexion = bounded retry loop, Generative Agents = long-horizon memory stream)
+- Supports: [[generative-agents-human-simulacra]] (both show reflection over past experience improves agent behavior; Reflexion = bounded retry loop, Generative Agents = long-horizon memory stream)
 - Contradicts: - (potential conflict with self-correction critique papers not yet in corpus)
 - Superseded by: -
 

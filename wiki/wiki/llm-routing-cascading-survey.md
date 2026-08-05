@@ -54,7 +54,7 @@ Trains routers on human or synthetic preference data, optimizing for win-rate ra
 ### 3. Clustering-based Routing (§4)
 Unsupervised grouping of queries; assign each cluster to its best-matching LLM.
 
-- **UniRoute** (Jitkrittum et al. 2026, [[jitkrittum-2025-uniroute]]): K-means on training set → K cluster centroids; each LLM represented as K-dim error vector; routing = nearest-centroid + cost-adjusted selection. New LLMs added without retraining.
+- **UniRoute** (Jitkrittum et al. 2026, [[universal-model-routing]]): K-means on training set → K cluster centroids; each LLM represented as K-dim error vector; routing = nearest-centroid + cost-adjusted selection. New LLMs added without retraining.
 - **Avengers-Pro** (Zhang et al. 2025): similar cluster-allocation strategy; demonstrates Pareto frontier surpassing GPT-5-medium.
 
 ### 4. Reinforcement Learning Routing (§5)
@@ -133,14 +133,15 @@ Three structural gaps from the design-space matrix:
 
 ## Not Stated in Source
 
-- GAPG ([[fang-2025-gapg]]) is not cited or covered: it trains intrinsic routing into the on-device model itself rather than using an external router — this "routing as post-training" paradigm is absent from the survey's taxonomy.
-- Minions ([[narayan-2025-minions]]) is also absent: it uses protocol-based decomposition rather than selection routing, which falls outside this survey's scope.
+- GAPG ([[on-device-cloud-collaborative-reasoning]]) is not cited or covered: it trains intrinsic routing into the on-device model itself rather than using an external router — this "routing as post-training" paradigm is absent from the survey's taxonomy.
+- Minions ([[minions-device-cloud-collaboration]]) is also absent: it uses protocol-based decomposition rather than selection routing, which falls outside this survey's scope.
 - No analysis of how routing system latency overhead compares to savings from smaller model use — the survey notes this trade-off exists but does not synthesize numbers across methods.
 
 ## Relations
+- Cluster: [[inference-efficiency]]
 
-- Classifies under taxonomy: [[jitkrittum-2025-uniroute]] (§4, clustering-based; described accurately)
-- Complements: [[ramnath-2025-apo-survey]] (sister survey for prompt optimization; analogous scope boundary issues)
-- Gap relative to: [[fang-2025-gapg]] (intrinsic routing via post-training not covered), [[narayan-2025-minions]] (decomposition-collaboration not covered)
+- Classifies under taxonomy: [[universal-model-routing]] (§4, clustering-based; described accurately)
+- Complements: [[automatic-prompt-optimization-survey]] (sister survey for prompt optimization; analogous scope boundary issues)
+- Gap relative to: [[on-device-cloud-collaborative-reasoning]] (intrinsic routing via post-training not covered), [[minions-device-cloud-collaboration]] (decomposition-collaboration not covered)
 - Contradicts: -
 - Superseded by: -

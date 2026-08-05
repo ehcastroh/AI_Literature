@@ -1,5 +1,5 @@
 ---
-name: wiki-discovery
+name: discover
 description: Find what the corpus knows that no single paper states — contradictions between papers, untested shared assumptions, stale claims, single-study findings treated as settled, and unexplored transfers between methods and problems. Use when asked to find gaps, contradictions, open questions, research directions, or what to read next, or when running a periodic corpus review.
 ---
 
@@ -98,7 +98,7 @@ If you cannot run at least (2), cap the claim at `GAP-IN-CORPUS`.
 
 **Whatever survives deliberate attempts to kill it is worth writing up.** What survives only inattention is not.
 
-**Phase 4 — Write.** Use the `open/` template in `wiki/CONVENTIONS.md` §7. State the classification (`GAP-IN-WIKI` / `-CORPUS` / `-FIELD`) and what you searched. Add the row to `wiki/index.md`.
+**Phase 4 — Write.** Use the `open/` template in `wiki/CLAUDE.md` §7. State the classification (`GAP-IN-WIKI` / `-CORPUS` / `-FIELD`) and what you searched. Add the row to `wiki/index.md`.
 
 **Phase 5 — Log.** Append to `wiki/log.md`: pattern run, papers swept, candidates found, candidates killed and why, pages opened. **Record the kills.** A future pass that does not know what was already ruled out will re-derive the same dead ends.
 

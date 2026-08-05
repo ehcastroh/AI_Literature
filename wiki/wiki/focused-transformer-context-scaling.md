@@ -76,9 +76,10 @@ Both positives and negatives pass through the memory attention layer in a fully 
 - Whether the distraction issue re-emerges as model scale increases is not studied.
 
 ## Relations
+- Cluster: [[retrieval-and-context]]
 
-- Supports: [[park-2023-generative-agents]] (provides a technical path to extend context limits cited as a key constraint in that paper; Generative Agents could benefit from longer effective context to reduce retrieval approximations)
-- Supports: [[shinn-2023-reflexion]] (Reflexion bounded episodic memory to Ω=1-3 due to context length; FoT is one approach to relax that constraint)
+- Supports: [[generative-agents-human-simulacra]] (provides a technical path to extend context limits cited as a key constraint in that paper; Generative Agents could benefit from longer effective context to reduce retrieval approximations)
+- Supports: [[reflexion-verbal-reinforcement-learning]] (Reflexion bounded episodic memory to Ω=1-3 due to context length; FoT is one approach to relax that constraint)
 - Contradicts: -
 - Superseded by: -
 

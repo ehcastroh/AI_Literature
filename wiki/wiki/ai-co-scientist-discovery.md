@@ -95,9 +95,10 @@ Co-Scientist is a multi-agent AI system built on Gemini 2.0 that generates novel
 - The AMR recapitulation result depends on temporal coincidence with Penadés et al.; the authors cannot rule out indirect information leakage through training data or literature.
 
 ## Relations
+- Cluster: [[agents-and-memory]]
 
-- Supports: [[park-2023-generative-agents]] (multi-agent architecture with specialized roles and persistent memory; Co-Scientist applies the same pattern to scientific discovery rather than social simulation)
-- Supports: [[shinn-2023-reflexion]] (iterative self-improvement through reflection and memory; Co-Scientist's Reflection + Meta-review agents serve the analogous verbal-RL role, but at system scale with six specialized agents)
-- Extends: [[ramnath-2025-apo-survey]] (the Meta-review agent's prompt-appending feedback loop is an instance of §9.3's open challenge: "concurrent optimization of multiple agentic components")
+- Supports: [[generative-agents-human-simulacra]] (multi-agent architecture with specialized roles and persistent memory; Co-Scientist applies the same pattern to scientific discovery rather than social simulation)
+- Supports: [[reflexion-verbal-reinforcement-learning]] (iterative self-improvement through reflection and memory; Co-Scientist's Reflection + Meta-review agents serve the analogous verbal-RL role, but at system scale with six specialized agents)
+- Extends: [[automatic-prompt-optimization-survey]] (the Meta-review agent's prompt-appending feedback loop is an instance of §9.3's open challenge: "concurrent optimization of multiple agentic components")
 - Contradicts: -
 - Superseded by: -

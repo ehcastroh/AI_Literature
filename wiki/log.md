@@ -33,7 +33,7 @@ Chronological record of papers added, summaries written, and wiki updates.
 - Wrote: wiki/papers/moslem-2026-routing-survey.md
 - Index: row added
 - Glossary: +model cascading; updated LLM routing entry
-- Contradictions: none (GAPG [[fang-2025-gapg]] and Minions [[narayan-2025-minions]] cover paradigms absent from this survey's scope — noted in Not Stated)
+- Contradictions: none (GAPG [[on-device-cloud-collaborative-reasoning]] and Minions [[minions-device-cloud-collaboration]] cover paradigms absent from this survey's scope — noted in Not Stated)
 - Confidence: VERIFIED
 - Inventory after: 17/19 ingested
 
@@ -55,7 +55,7 @@ Chronological record of papers added, summaries written, and wiki updates.
 - Wrote: wiki/papers/hua-2025-context-engineering-2.md
 - Index: row added
 - Glossary: no new terms (four-era model and entropy-reduction framing are conceptual; "self-baking" is paper-specific vocabulary not yet field-standard)
-- Contradictions: none (complements [[mei-2025-context-engineering-survey]]; different angles on same topic)
+- Contradictions: none (complements [[context-engineering-survey]]; different angles on same topic)
 - Confidence: VERIFIED
 - Inventory after: 15/19 ingested
 
@@ -66,7 +66,7 @@ Chronological record of papers added, summaries written, and wiki updates.
 - Wrote: wiki/papers/fang-2025-gapg.md
 - Index: row added
 - Glossary: no new terms (GAPG is paper-specific; "group-level policy gradient" is a variant of GRPO, not a standalone field term)
-- Contradictions: none (complements [[narayan-2025-minions]] via different approach to same problem; Minions uses external protocol, GAPG trains intrinsic routing — both can be valid depending on deployment constraints)
+- Contradictions: none (complements [[minions-device-cloud-collaboration]] via different approach to same problem; Minions uses external protocol, GAPG trains intrinsic routing — both can be valid depending on deployment constraints)
 - Confidence: VERIFIED
 - Inventory after: 14/19 ingested
 

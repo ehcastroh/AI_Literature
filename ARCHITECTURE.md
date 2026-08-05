@@ -41,7 +41,7 @@ staging/    DERIVED.     1:1 extraction per source, no cross-page synthesis.
                          Cheap to regenerate. Low review bar.
 wiki/       SYNTHESIZED. Agent-owned. Git-tracked. This is where editorial
                          judgment lives, so it never regenerates identically.
-schema/     GOVERNING.   CLAUDE.md, CONVENTIONS.md, skills, agents.
+schema/     GOVERNING.   CLAUDE.md, CLAUDE.md, skills, agents.
                          Highest scrutiny — every future run reads these.
 ```
 
@@ -66,13 +66,14 @@ llm-wiki/
 │   └── <slug>.md                #   claims + locators, no synthesis
 │
 ├── wiki/                        # LAYER 3 — synthesis, agent-owned
-│   ├── CONVENTIONS.md           #   how to write anything here
+│   ├── CLAUDE.md           #   how to write anything here
 │   ├── index.md                 #   catalog. Content-oriented. Read first on query.
 │   ├── overview.md              #   the map. Global before local.
 │   ├── glossary.md              #   canonical names + aliases
 │   ├── log.md                   #   append-only, grep-parseable
 │   │
-│   ├── papers/                  #   REFERENCE  — one per source, zero friction
+│   ├── wiki/                    #   REFERENCE  — one per source, zero friction
+│   ├── raw/                     #   source PDFs for Obsidian access (gitignored)
 │   ├── concepts/                #   REFERENCE  — cross-source entities/concepts
 │   ├── topics/                  #   EXPLANATION — human learning, friction preserved
 │   ├── open/                    #   DISCOVERY  — contradictions, gaps, unresolved
@@ -98,13 +99,13 @@ llm-wiki/
 
 ## Why each wiki subdirectory exists
 
-**`papers/` — reference, per source.** Mirrors one PDF. Zero friction; half the readers are agents doing lookup, and friction breaks them. Never restated elsewhere.
+**`wiki/` — reference, per source.** Mirrors one PDF. Zero friction; half the readers are agents doing lookup, and friction breaks them. Never restated elsewhere.
 
 **`concepts/` — reference, cross-source.** The entity and concept pages that make the wiki compound. A concept mentioned in five papers gets one page that five paper notes link to. **This is where the wiki stops being a stack of summaries.**
 
 *New page vs. edit heuristic:* create a page when it's a distinct thing you would link to from elsewhere; edit in place when it's an attribute or update of something that exists. Agents get this right about nine times in ten once the page types are enumerated — and wrong the rest, which is what `lint` catches.
 
-**`topics/` — explanation and tutorial.** Human learning. This is the only place friction belongs: retrieval prompts, attempt-before-reveal, faded scaffolding, declared prior knowledge. Links to `papers/` and `concepts/`; never restates their numbers.
+**`topics/` — explanation and tutorial.** Human learning. This is the only place friction belongs: retrieval prompts, attempt-before-reveal, faded scaffolding, declared prior knowledge. Links to `wiki/` and `concepts/`; never restates their numbers.
 
 **`open/` — discovery.** Contradictions and gaps, stated at full strength and left unresolved. A resolved `open/` page should have become a `topics/` page — but keep the file, because the record that the field changed its mind is how you calibrate trust in current certainty.
 
@@ -122,7 +123,7 @@ Borrowed from harness engineering, with a fourth that knowledge work needs and c
 1. **Deterministic checks across the whole wiki** — `scripts/`. Dead links, orphans, inventory drift, ref-DAG staleness. These are the oracle.
 2. **A fresh-eyes agent that did not write the page and cannot see the writer's reasoning.** Models struggle to self-correct without external feedback and often degrade when they try. A reviewer subagent with read-only tools and no access to the drafting context is a genuine external signal — the only cheap one available.
 
-**Meta — the schema evolves.** A defect caught twice becomes a rule in `CONVENTIONS.md`. Otherwise you re-teach it every session forever.
+**Meta — the schema evolves.** A defect caught twice becomes a rule in `CLAUDE.md`. Otherwise you re-teach it every session forever.
 
 **Decay — knowledge goes stale on its own.** Shipped code stays correct until the spec changes. A claim about model capability from 2022 rots while sitting still. This loop has no analogue in software and it is why `lint` runs on a timer rather than on change.
 

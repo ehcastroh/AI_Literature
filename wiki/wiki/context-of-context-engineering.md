@@ -18,7 +18,7 @@ Qishuo Hua, Lyumanshan Ye, Dayuan Fu, Yang Xiao, Xiaojie Cai, Yunze Wu, Jifan Li
 
 ## Claim
 
-This is a position paper. No novel method or empirical result. Contribution: argues that context engineering traces its roots to 1990s HCI and ubiquitous computing — not just the LLM era — and frames the field as an ongoing human-machine cognitive gap reduction process driven by machine intelligence level. Proposes a four-era evolutionary model and an entropy-reduction lens for understanding context engineering. Directly complements [[mei-2025-context-engineering-survey]] (cited) by providing historical depth rather than technical taxonomy. (§1, §2)
+This is a position paper. No novel method or empirical result. Contribution: argues that context engineering traces its roots to 1990s HCI and ubiquitous computing — not just the LLM era — and frames the field as an ongoing human-machine cognitive gap reduction process driven by machine intelligence level. Proposes a four-era evolutionary model and an entropy-reduction lens for understanding context engineering. Directly complements [[context-engineering-survey]] (cited) by providing historical depth rather than technical taxonomy. (§1, §2)
 
 ## Formal Definition (§2.1)
 
@@ -79,7 +79,8 @@ Three dimensions covered:
 - No quantitative study of how "human-AI interaction cost" (y-axis in Fig. 1) is actually measured or decreasing across eras.
 
 ## Relations
+- Cluster: [[retrieval-and-context]]
 
-- Extends: [[mei-2025-context-engineering-survey]] (same topic; this paper adds historical framing and philosophical lens; Mei et al. adds technical taxonomy and comprehension-generation gap finding; the two are complementary, not contradictory)
+- Extends: [[context-engineering-survey]] (same topic; this paper adds historical framing and philosophical lens; Mei et al. adds technical taxonomy and comprehension-generation gap finding; the two are complementary, not contradictory)
 - Contradicts: -
 - Superseded by: -

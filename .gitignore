@@ -1,5 +1,6 @@
 # Raw PDFs — large binaries; track metadata in wiki/ instead
-raw/*.pdf
+raw/papers/*.pdf
+wiki/raw/
 
 # OS artifacts
 .DS_Store

@@ -80,6 +80,7 @@ Key negative: methods not designed for MLLM scale (CoTTA, TENT) actually degrade
 - How many adaptation rounds (R) are needed before convergence not studied; only "1-round scenario" is validated for VQA.
 
 ## Relations
+- Cluster: [[inference-efficiency]]
 
 - Supports: -
 - Contradicts: -

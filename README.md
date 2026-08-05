@@ -142,7 +142,7 @@ For your own corpus, in any domain.
 
 **1. Decide what your `raw/` is.** Papers, transcripts, clipped articles, meeting notes. The only requirement is that it's immutable and you didn't write it.
 
-**2. Take the four schema files.** `CLAUDE.md`, `BEHAVIORAL_AND_CULTURE.md`, `ARCHITECTURE.md`, `wiki/CONVENTIONS.md`. `BEHAVIORAL_AND_CULTURE.md` is domain-independent — take it as-is. The other three need domain edits, mostly in the non-negotiables and the page-type definitions.
+**2. Take the four schema files.** `CLAUDE.md`, `BEHAVIORAL_AND_CULTURE.md`, `ARCHITECTURE.md`, `wiki/CLAUDE.md`. `BEHAVIORAL_AND_CULTURE.md` is domain-independent — take it as-is. The other three need domain edits, mostly in the non-negotiables and the page-type definitions.
 
 **3. Adjust the page types to your domain.** This is the highest-leverage change and the one most people skip. `papers/` and `concepts/` are right for a literature corpus. For a book, you'd want `characters/` and `themes/`. For an internal team wiki, `systems/` and `incidents/`. The agent's new-page-vs-edit judgment is right about nine times in ten *once the page types are enumerated*, and much worse when they aren't.
 
@@ -150,7 +150,7 @@ For your own corpus, in any domain.
 
 **5. Run `BOOTSTRAP.md` one phase per session.** Phase 6 is the real test: ingest one source, then start a fresh session with only `wiki/index.md` and ask it to state the central claim, the boundary conditions, and what would falsify it. Whatever that session gets wrong is what your ingest process systematically drops. It will be decision knowledge, because that's what fluency hides.
 
-**6. Let the schema co-evolve.** A defect caught twice becomes a rule in `CONVENTIONS.md`. Otherwise you re-teach it every session forever.
+**6. Let the schema co-evolve.** A defect caught twice becomes a rule in `CLAUDE.md`. Otherwise you re-teach it every session forever.
 
 **Expected effort:** the bootstrap is roughly 6–8 focused sessions. First useful answers after ~5 ingests. `overview.md` becomes writable around then too — you can't map a field you haven't read.
 

@@ -87,10 +87,11 @@ Evaluation: FinanceBench (financial document QA), LongHealth (clinical records Q
 - No study of failure modes: when does MinionS confidently produce a wrong answer (hallucination in the local→remote path)?
 
 ## Relations
+- Cluster: [[inference-efficiency]]
 
-- Supports: [[park-2023-generative-agents]] (both study multi-agent computation with orchestration; MinionS provides a practical asymmetric collaboration protocol that agent systems like Generative Agents could adopt for cost-efficient long-document processing)
-- Supports: [[jiang-2023-longllmlingua]] (complementary: LongLLMLingua compresses what's sent to the remote LLM; MinionS routes long-context reading entirely to local to reduce remote token consumption - both reduce remote cost, different mechanisms)
-- Supports: [[jitkrittum-2025-uniroute]] (both address inference efficiency; MinionS adds a collaboration layer on top of routing - one selects which model handles the whole task, the other splits the task between models)
+- Supports: [[generative-agents-human-simulacra]] (both study multi-agent computation with orchestration; MinionS provides a practical asymmetric collaboration protocol that agent systems like Generative Agents could adopt for cost-efficient long-document processing)
+- Supports: [[longllmlingua-prompt-compression]] (complementary: LongLLMLingua compresses what's sent to the remote LLM; MinionS routes long-context reading entirely to local to reduce remote token consumption - both reduce remote cost, different mechanisms)
+- Supports: [[universal-model-routing]] (both address inference efficiency; MinionS adds a collaboration layer on top of routing - one selects which model handles the whole task, the other splits the task between models)
 - Contradicts: -
 - Superseded by: -
 

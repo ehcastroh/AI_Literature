@@ -80,8 +80,9 @@ PE2 operates as a meta-prompted LLM prompt optimizer (§3):
 - The shortcut learning in base-8 addition achieves 37% - not analyzed to know if this represents a genuine generalization or just fitting to the visible test structure.
 
 ## Relations
+- Cluster: [[prompt-optimization]]
 
-- Supports: [[shinn-2023-reflexion]] (Reflexion uses verbal self-reflection to improve an agent's action policy; PE2 applies the same principle at the prompt level, using failure inspection and verbal feedback to improve the prompt itself - both are forms of verbal optimization)
+- Supports: [[reflexion-verbal-reinforcement-learning]] (Reflexion uses verbal self-reflection to improve an agent's action policy; PE2 applies the same principle at the prompt level, using failure inspection and verbal feedback to improve the prompt itself - both are forms of verbal optimization)
 - Contradicts: -
 - Superseded by: -
 

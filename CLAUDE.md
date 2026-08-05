@@ -14,11 +14,11 @@ This wiki serves reference lookup, human learning, and discovery. **Those three 
 
 | Directory | Mode | Optimized for | Friction |
 |---|---|---|---|
-| `wiki/papers/` | Reference | Lookup, by human or agent | **None.** Dense, flat, scannable. |
+| `wiki/wiki/` | Reference | Paper notes - lookup by human or agent | **None.** Dense, flat, scannable. |
 | `wiki/topics/` | Explanation + Tutorial | A human learning the field | **Preserved.** Retrieval prompts, attempt-before-reveal. |
 | `wiki/open/` | Discovery | Generating the next question | **Deliberate.** Tensions stay unresolved. |
 
-Writing a learning exercise into `papers/` breaks agent retrieval. Writing a terse reference into `topics/` produces a pleasant page nobody learns from. Check which directory you are in before choosing a register.
+Writing a learning exercise into `wiki/` breaks agent retrieval. Writing a terse reference into `topics/` produces a pleasant page nobody learns from. Check which directory you are in before choosing a register.
 
 ---
 
@@ -31,7 +31,8 @@ wiki/
   overview.md           The map of the field at low resolution. Global before local.
   glossary.md           Canonical names. The defense against private vocabulary.
   log.md                Append-only ledger. Provenance and inventory.
-  papers/               One file per ingested paper. Reference mode.
+  wiki/                 One file per ingested paper. Reference mode.
+  raw/                  Source PDFs for Obsidian access. Gitignored.
   topics/               Cross-paper synthesis. Explanation mode. (create as needed)
   open/                 Contradictions, gaps, stale claims. Discovery mode. (create as needed)
 flake.nix               Nix dev shell: pandoc, ripgrep, fd, fzf, jq, lazygit.
@@ -46,9 +47,9 @@ Load only what the task needs.
 
 | If you are… | Load |
 |---|---|
-| Ingesting a PDF from `raw/` | `.claude/skills/ingest_article.md` |
-| Writing or editing any wiki prose | `wiki/CONVENTIONS.md` |
-| Looking for gaps, contradictions, or questions | `.claude/skills/discover_article.md` |
+| Ingesting a PDF from `raw/` | `.claude/skills/ingest.md` |
+| Writing or editing any wiki prose | `wiki/CLAUDE.md` |
+| Looking for gaps, contradictions, or questions | `.claude/skills/discover.md` |
 | Unsure how to learn or hand off in a new domain | `BEHAVIORAL_AND_CULTURE.md` |
 | Answering a question from the wiki | Nothing. Read `wiki/index.md`, follow the row. |
 
@@ -78,9 +79,9 @@ Load only what the task needs.
 
 ```markdown
 ## 2026-07-25 — ingest: shinn-2023-reflexion
-- Source: raw/2303.11366.pdf
+- Source: raw/papers/2303.11366.pdf
 - Read: full (method §3, results §4, limitations §5)
-- Wrote: wiki/papers/shinn-2023-reflexion.md
+- Wrote: wiki/wiki/reflexion-verbal-reinforcement-learning.md
 - Index: row added
 - Glossary: +verbal reinforcement learning, +episodic memory buffer
 - Contradictions: conflicts with huang-2024-self-correct → opened wiki/open/does-self-reflection-work.md

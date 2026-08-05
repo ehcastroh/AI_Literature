@@ -74,6 +74,7 @@ Implementation: InstructGPT temperature 0.7; English retrieval uses Contriever, 
 - As of 2022 the retrieval of multiple hypothetical docs was via InstructGPT (closed API). Open-source replication requires a comparable instruction-following model.
 
 ## Relations
+- Cluster: [[retrieval-and-context]]
 
 - Supports: - (no papers yet in corpus)
 - Contradicts: - (no papers yet in corpus)

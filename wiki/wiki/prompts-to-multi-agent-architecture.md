@@ -141,13 +141,14 @@ The author explicitly acknowledges:
 
 ## Not Stated in Source
 
-- The paper does not compare its five criteria to [[mei-2025-context-engineering-survey]]'s formal optimization framing or [[hua-2025-context-engineering-2]]'s entropy-reduction lens; the three frameworks are complementary but not cross-referenced.
+- The paper does not compare its five criteria to [[context-engineering-survey]]'s formal optimization framing or [[context-of-context-engineering]]'s entropy-reduction lens; the three frameworks are complementary but not cross-referenced.
 - The author's own multi-agent compliance system is mentioned (NER detector false-positives problem, strict filtering between sub-agents) but not described in depth; claimed it is currently being tested with no published results.
 
 ## Relations
+- Cluster: [[retrieval-and-context]]
 
-- Extends: [[mei-2025-context-engineering-survey]] (same core topic; this paper adds enterprise/governance layer and the four-level pyramid; Mei et al. adds formal optimization definition and comprehension-generation gap)
-- Extends: [[hua-2025-context-engineering-2]] (both frame context engineering as more than prompting; Hua uses historical/philosophical lens; Vishnyakova uses enterprise practitioner lens)
-- Complements: [[park-2023-generative-agents]] (both treat memory as multi-tiered infrastructure, independently; Park's four-type taxonomy and Vishnyakova's four-type taxonomy are structurally similar)
+- Extends: [[context-engineering-survey]] (same core topic; this paper adds enterprise/governance layer and the four-level pyramid; Mei et al. adds formal optimization definition and comprehension-generation gap)
+- Extends: [[context-of-context-engineering]] (both frame context engineering as more than prompting; Hua uses historical/philosophical lens; Vishnyakova uses enterprise practitioner lens)
+- Complements: [[generative-agents-human-simulacra]] (both treat memory as multi-tiered infrastructure, independently; Park's four-type taxonomy and Vishnyakova's four-type taxonomy are structurally similar)
 - Contradicts: -
 - Superseded by: -

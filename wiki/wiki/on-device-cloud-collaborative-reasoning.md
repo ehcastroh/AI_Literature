@@ -96,8 +96,9 @@ The constraint bounds the cloud-invocation-to-local ratio; ρ=30% in experiments
 - The cloud model (DeepSeek-R1) has significantly more parameters than the on-device models; the performance gap is partly a function of this size difference, not just local vs cloud deployment.
 
 ## Relations
+- Cluster: [[inference-efficiency]]
 
-- Contrasts: [[narayan-2025-minions]] (both address local-remote collaboration for inference efficiency; MinionS uses an external protocol with task decomposition and code generation — on-device model weights unchanged; GAPG trains intrinsic routing via RL — on-device weights change; the two are complementary approaches to the same problem)
-- Contrasts: [[jitkrittum-2025-uniroute]] (UniRoute trains an external router to select from a pool of LLMs; GAPG eliminates the external router by training the on-device LLM itself to recognize its limitations)
+- Contrasts: [[minions-device-cloud-collaboration]] (both address local-remote collaboration for inference efficiency; MinionS uses an external protocol with task decomposition and code generation — on-device model weights unchanged; GAPG trains intrinsic routing via RL — on-device weights change; the two are complementary approaches to the same problem)
+- Contrasts: [[universal-model-routing]] (UniRoute trains an external router to select from a pool of LLMs; GAPG eliminates the external router by training the on-device LLM itself to recognize its limitations)
 - Contradicts: -
 - Superseded by: -

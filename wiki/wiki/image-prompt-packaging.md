@@ -12,6 +12,7 @@ expires_when: "Results benchmark against GPT-4.1, GPT-4o, and Claude 3.5 Sonnet 
 tags: [multimodal, prompt-compression, inference-efficiency, VQA, token-efficiency, cost-optimization, enterprise]
 ---
 
+
 # Token-Efficient Multimodal Reasoning via Image Prompt Packaging
 
 Joong Ho Choi, Jiayang Zhao, Avani Appalla, Himansh Mukesh, Dhwanil Vasani, Boyi Qian. BNY (Bank of New York Mellon), Pittsburgh. arXiv:2604.02492v1 (April 2026).
@@ -121,8 +122,9 @@ The default black/Arial configuration is suboptimal for most model-dataset combi
 - HumanEval tests a purely text task (no native visual input); the severe Claude degradation (-41pp) may reflect Claude's stronger alignment with code reasoning in text form, not a general IPPg failure.
 
 ## Relations
+- Cluster: [[inference-efficiency]]
 
-- Complements: [[jiang-2023-longllmlingua]] (both address prompt token reduction; LongLLMLingua compresses text via perplexity-based pruning; IPPg reroutes text to the image channel; techniques are orthogonal and could be combined)
-- Relates to: [[liu-2023-cdcca]] (both address MLLM efficiency; CD-CCA uses knowledge distillation for edge-cloud adaptation; IPPg uses prompt-time visual routing — different deployment layer)
+- Complements: [[longllmlingua-prompt-compression]] (both address prompt token reduction; LongLLMLingua compresses text via perplexity-based pruning; IPPg reroutes text to the image channel; techniques are orthogonal and could be combined)
+- Relates to: [[cloud-device-collaborative-learning]] (both address MLLM efficiency; CD-CCA uses knowledge distillation for edge-cloud adaptation; IPPg uses prompt-time visual routing — different deployment layer)
 - Contradicts: -
 - Superseded by: -

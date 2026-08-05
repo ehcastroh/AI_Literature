@@ -108,8 +108,9 @@ Hard queries show the largest gains — exactly where correlational methods brea
 - The benchmarks used (MATH, VisEval, DABench) are English-only academic tasks; enterprise deployment in multilingual or domain-specific settings is not validated.
 
 ## Relations
+- Cluster: [[prompt-optimization]]
 
-- Extends: [[ye-2023-pe2]] (both do automatic prompt optimization via meta-prompt or search; CPO replaces PE2's LLM-as-evaluator with an offline causal reward model — directly addressing PE2's cost bottleneck)
-- Classified under: [[ramnath-2025-apo-survey]] §4 (Inference Evaluation and Feedback: novel "causal reward model" category, not covered in the survey; also §5.1 dynamic/query-level generation)
+- Extends: [[prompt-engineering-a-prompt-engineer]] (both do automatic prompt optimization via meta-prompt or search; CPO replaces PE2's LLM-as-evaluator with an offline causal reward model — directly addressing PE2's cost bottleneck)
+- Classified under: [[automatic-prompt-optimization-survey]] §4 (Inference Evaluation and Feedback: novel "causal reward model" category, not covered in the survey; also §5.1 dynamic/query-level generation)
 - Contradicts: -
 - Superseded by: -

@@ -87,8 +87,9 @@ Architecture has three interlocking components (§4, Fig. 5):
 - User manipulation of agents via "inner voice" (§3.1.2) could systematically alter agent behavior; this is not evaluated as a robustness concern.
 
 ## Relations
+- Cluster: [[agents-and-memory]]
 
-- Supports: [[shinn-2023-reflexion]] (both demonstrate that higher-level reflection over past experience improves agent behavior; different time horizons and memory designs)
+- Supports: [[reflexion-verbal-reinforcement-learning]] (both demonstrate that higher-level reflection over past experience improves agent behavior; different time horizons and memory designs)
 - Contradicts: -
 - Superseded by: -
 

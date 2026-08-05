@@ -58,7 +58,7 @@ Three-tier progressive disclosure: name and description at discovery, full body 
 
 Full citations with effect sizes, sample counts, and boundary conditions are in [`learning-transmission-principles.md`](learning-transmission-principles.md) §12. The load-bearing ones:
 
-**Sullivan, Yates, Inaba, Lam & Clark (2014)**, *Academic Medicine* — the 70% rule. Surgeons describing routine procedures from unaided recall omitted an average of 71% of clinical knowledge steps and 73% of decision steps. The single most actionable finding in this repo, and the basis for the elicitation structure in `wiki/CONVENTIONS.md`.
+**Sullivan, Yates, Inaba, Lam & Clark (2014)**, *Academic Medicine* — the 70% rule. Surgeons describing routine procedures from unaided recall omitted an average of 71% of clinical knowledge steps and 73% of decision steps. The single most actionable finding in this repo, and the basis for the elicitation structure in `wiki/CLAUDE.md`.
 
 **Soderstrom & Bjork (2015)**, *Perspectives on Psychological Science* — learning versus performance. That the two can move in opposite directions is why fluent documentation is not good documentation.
 

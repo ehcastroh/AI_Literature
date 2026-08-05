@@ -96,6 +96,7 @@ Setup: 400 random train/val/test splits per dataset. Gecko 1B (768-dim) for prom
 - Whether the K-means clusters have semantic interpretations (e.g., "math prompts", "code prompts") is only briefly touched in qualitative analysis.
 
 ## Relations
+- Cluster: [[inference-efficiency]]
 
 - Supports: -
 - Contradicts: -

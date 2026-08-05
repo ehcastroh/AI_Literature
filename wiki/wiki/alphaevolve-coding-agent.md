@@ -108,8 +108,9 @@ Each component contributes significantly to results on two benchmarks (matrix mu
 - The 48-multiplication 4×4 complex algorithm has been described but whether it yields practical wall-clock speedups in real hardware (vs Strassen) is not addressed.
 
 ## Relations
+- Cluster: [[agents-and-memory]]
 
-- Supports: [[gottweis-2025-coscientist]] (concurrent work explicitly cited; AlphaEvolve authors note the approaches are complementary - programmatic evaluation vs natural-language evaluation; suggest combining both)
+- Supports: [[ai-co-scientist-discovery]] (concurrent work explicitly cited; AlphaEvolve authors note the approaches are complementary - programmatic evaluation vs natural-language evaluation; suggest combining both)
 - Extends: FunSearch (Romera-Paredes et al. 2023) — not in corpus; AlphaEvolve is the direct generalization
 - Contradicts: -
 - Superseded by: -

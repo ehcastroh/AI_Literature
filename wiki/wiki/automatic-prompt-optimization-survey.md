@@ -82,8 +82,9 @@ None specific - this is a classification paper. Key judgment the survey makes: m
 - DSPY and program synthesis methods are treated as "prompt optimization" but they operate at pipeline-level, not prompt-level - the boundary is blurry.
 
 ## Relations
+- Cluster: [[prompt-optimization]]
 
-- Supports: [[ye-2023-pe2]] (survey explicitly categorizes PE2 under §5.3 "Metaprompt Design" and cites it as motivating the survey's recognition of the meta-prompt search space as underexplored; validates PE2's framing)
+- Supports: [[prompt-engineering-a-prompt-engineer]] (survey explicitly categorizes PE2 under §5.3 "Metaprompt Design" and cites it as motivating the survey's recognition of the meta-prompt search space as underexplored; validates PE2's framing)
 - Contradicts: -
 - Superseded by: -
 
