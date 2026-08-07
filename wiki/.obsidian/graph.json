@@ -8,44 +8,23 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:topics/glossary",
+      "query": "",
       "color": {
         "a": 1,
-        "rgb": 4193280
-      }
-    },
-    {
-      "query": "file:glossary OR file:index OR file:overview",
-      "color": {
-        "a": 1,
-        "rgb": 15098931
-      }
-    },
-    {
-      "query": "path:open/",
-      "color": {
-        "a": 1,
-        "rgb": 16744192
-      }
-    },
-    {
-      "query": "path:topics/",
-      "color": {
-        "a": 1,
-        "rgb": 5636095
+        "rgb": 14725458
       }
     }
   ],
   "collapse-display": false,
   "showArrow": true,
   "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1.5,
+  "nodeSizeMultiplier": 1.29811757600161,
   "lineSizeMultiplier": 1,
-  "collapse-forces": true,
-  "centerStrength": 0.5,
-  "repelStrength": 10,
-  "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 1,
+  "collapse-forces": false,
+  "centerStrength": 0.49506744513791,
+  "repelStrength": 13.7364275069193,
+  "linkStrength": 0.390577813569559,
+  "linkDistance": 251,
+  "scale": 0.19753086419753085,
   "close": false
 }
