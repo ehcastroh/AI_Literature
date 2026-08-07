@@ -70,7 +70,7 @@ Two sections do the work that fluency would otherwise skip:
 Writing the file is not ingesting. An unlinked note is not in the wiki.
 
 - [ ] **`wiki/index.md`** — add exactly one row. A note absent from the index has not been transmitted, however well written.
-- [ ] **`wiki/glossary.md`** — add new terms under their **canonical** names. If the paper coins a term for something the field already names, the established name is the entry and the paper's coinage is an alias.
+- [ ] **`~/Projects/LLM_Wikis/Dictionary_AI/dictionary/`** — add new terms here, not to `wiki/glossary.md`. Dictionary_AI is the single source of truth for all AI terminology across LLM_Wikis. Follow the skill at `Dictionary_AI/.claude/skills/dictionary-update.md`: one `.md` file per term, YAML frontmatter with `description`, `tags`, and `status`. If the paper coins a term for something the field already names, the established name is the entry and the paper's coinage is listed under `_Avoid:_`.
 - [ ] **`wiki/overview.md`** — does the map of the field need adjusting? Usually no. Occasionally a paper relocates a whole subfield.
 - [ ] **Cluster assignment** — add `- Cluster: [[concept-slug]]` to the paper note's Relations section. The four existing concept pages are:
 

@@ -25,7 +25,7 @@ Writing a learning exercise into `wiki/` breaks agent retrieval. Writing a terse
 ## Repo map
 
 ```
-raw/                    19 PDFs, 2022–2026. READ-ONLY. Never edit, move, or delete.
+raw/                    PDFs. READ-ONLY for existing files. New PDFs from /scout land here.
 wiki/
   index.md              Routing table. Every artifact gets exactly one row.
   overview.md           The map of the field at low resolution. Global before local.
@@ -49,7 +49,9 @@ Load only what the task needs.
 |---|---|
 | Ingesting a PDF from `raw/` | `.claude/skills/ingest.md` |
 | Writing or editing any wiki prose | `wiki/CLAUDE.md` |
-| Looking for gaps, contradictions, or questions | `.claude/skills/discover.md` |
+| Looking for gaps, contradictions, or questions inside the corpus | `.claude/skills/discover.md` |
+| Finding new papers via ArXiv author lineage (external, forward-looking) | `.claude/skills/scout.md` |
+| Adding new terms to Dictionary_AI from ingested papers | `.claude/skills/update-glossary.md` |
 | Unsure how to learn or hand off in a new domain | `BEHAVIORAL_AND_CULTURE.md` |
 | Answering a question from the wiki | Nothing. Read `wiki/index.md`, follow the row. |
 

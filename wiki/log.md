@@ -4,6 +4,36 @@ Chronological record of papers added, summaries written, and wiki updates.
 
 ---
 
+## 2026-08-06 — glossary update
+- Swept: all 21 notes (full sweep — first comprehensive pass after two scout ingests)
+- Added to Dictionary_AI: +Memory attention layers (introduced), +Mr.TyDi (stub), +ReAct (introduced), +Premature termination (stub), +Test-time scaling (stub), +Knowledge distillation (introduced), +GRPO (stub)
+- Promoted stubs: Context rot → introduced (done during context-rot ingest; confirmed)
+- Skipped (paper-specific): spec abstraction, LLM-guided spec search, personal AI stack, FoldAgent, behavior-aware filtering, context compaction/trimming/isolation (0-1 corpus appearances each)
+- Skipped (already present): all 21 previously logged terms confirmed in Dictionary_AI
+- Missing logged terms recovered: memory attention layers (logged 2026-08-04, was absent from Dictionary_AI), Mr.TyDi (same)
+
+## 2026-08-06 — ingest: context-rot-long-horizon-search
+- Source: raw/papers/2606.29718v2.pdf
+- Read: full (§1 Intro + contributions, §2 Related Work: context rot + context management taxonomy, §3.1 preliminaries, §3.2 terminal states taxonomy, §3.3 experimental setup + main diagnostic results Figs 2-4 + Table 2, §4.1 context management methods + main results Table 3 + threshold sensitivity Table 4, §4.2 behavior-aware filtering Table 5 + Fig 5, §5 Conclusion + Limitations)
+- Priors that died: "operationalizes what Vishnyakova named conceptually" — partially right, but the paper is narrower: it studies premature termination specifically in deep web search, not the full four-failure-mode taxonomy Vishnyakova proposed. The term "context rot" predates both (Hong et al. 2025, Chroma); Vishnyakova cited it, and this paper extends it into agentic search empirics.
+- Wrote: wiki/wiki/context-rot-long-horizon-search.md
+- Index: row added
+- Glossary: updated Dictionary_AI "Context rot" stub to introduced status — added premature termination phenomenon and model-dependent method selection findings
+- Contradictions: none; complements vishnyakova (naming taxonomy) and mei/hua (context engineering formalism) with empirical agentic search evidence
+- Confidence: VERIFIED
+- Inventory after: 21/21 ingested
+
+## 2026-08-06 — ingest: openjarvis-personal-ai-on-device
+- Source: raw/papers/2605.17172v1.pdf
+- Read: full (§1 Intro + motivation, §2 Related Work all subsections, §3.1 spec abstraction + primitives, §3.2 evaluation metrics, §3.3 LLM-guided spec search + Algorithm 1, §4.1 experimental setup, §4.2 portability experiment Table 1, §4.3 accuracy-efficiency frontier Fig 5, §4.4 search ablations Figs 6-8 + Table 10, §5 Discussion + limitations)
+- Priors that died: "builds directly on Minions" — partially wrong. Paper cites Minions [58] as an inference-time collaboration approach that updates no primitive persistently; OpenJarvis is a different layer (search-time spec optimization vs. inference-time task decomposition). Complementary, not an extension.
+- Wrote: wiki/wiki/openjarvis-personal-ai-on-device.md
+- Index: row added
+- Glossary: no new field-standard terms (spec abstraction and LLM-guided spec search are paper-specific vocabulary; "personal AI stack" is emerging but not yet canonical)
+- Contradictions: none; Minions, GAPG, and UniRoute are complementary approaches at different layers — noted in Relations
+- Confidence: VERIFIED
+- Inventory after: 20/20 ingested
+
 ## 2026-08-04 - ingest: choi-2026-ippg
 - Source: raw/2604.02492v1.pdf
 - Read: full (§1 Intro, §2 Related work incl. modality bias research, §3.1 cost formulation + tokenization math, §3.2 IPPg pipeline, §4.1-4.5 five datasets, §5.1-5.3 results + error analysis all datasets, §5.3 rendering ablation, §6 Conclusion + future directions)
